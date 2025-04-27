@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sentence Polisher</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; padding: 15px; width: 320px; background: #f5f5f5; }
+    textarea { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; margin-bottom: 10px; height: 100px; }
+    button { width: 100%; padding: 12px; margin-bottom: 10px; background: #4F46E5; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
+    button:hover { background: #4338CA; }
+    #settingsBtn { background: #6B7280; }
+    #settingsBtn:hover { background: #4B5563; }
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #323232;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .toast.show { opacity: 1; }
+  </style>
+</head>
+<body>
+  <textarea id="inputSentence" placeholder="Type your sentence here..."></textarea>
+  <button id="polishBtn">Polish it ✨</button>
+  <textarea id="outputSentence" placeholder="Your polished sentence..." readonly></textarea>
+  <button id="settingsBtn">Settings ⚙️</button>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
